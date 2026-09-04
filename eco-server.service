@@ -1,0 +1,20 @@
+[Unit]
+Description=Eco Dedicated Server
+Wants=network-online.target
+After=syslog.target network.target nss-lookup.target network-online.target
+
+[Service]
+Type=simple
+User=eco
+Group=eco
+WorkingDirectory=/eco
+Environment="DOTNET_BUNDLE_EXTRACT_BASE_DIR=/home/eco/.net"
+EnvironmentFile=/eco/eco-server.env
+ExecStart=/eco/EcoServer --userToken=${ECO_USER_TOKEN}
+ExecStop=/bin/kill -TERM $MAINPID
+Restart=always
+RestartSec=5
+LimitNOFILE=100000
+
+[Install]
+WantedBy=multi-user.target

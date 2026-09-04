@@ -1,0 +1,8 @@
+# Ne jamais committer le token ni les données du serveur
+eco-server.env
+*.env
+Configs/
+Storage/
+Mods/
+*-backup/
+backup-*/
