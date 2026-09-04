@@ -3,7 +3,7 @@
 ## Récupérer ce dépôt sur ton VPS
 
 ```bash
-git clone https://github.com/<ton-user>/<ton-repo>.git /root/eco-migration
+git clone https://github.com/guillaumemen/Eco-serv.git /root/eco-migration
 cd /root/eco-migration
 chmod +x *.sh
 ```
